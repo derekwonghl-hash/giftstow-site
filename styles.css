@@ -162,6 +162,57 @@ a:focus-visible {
   line-height: 1.5;
 }
 
+.app-store-area {
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.app-store-placeholder {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 20px;
+  color: var(--navy);
+  background: var(--surface);
+  border: 1px dashed var(--muted);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.app-store-placeholder svg {
+  width: 27px;
+  height: 36px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.app-store-kicker,
+.app-store-name {
+  display: block;
+}
+
+.app-store-kicker {
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.app-store-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.app-store-note {
+  max-width: 34ch;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
 .hero-logo {
   width: min(100%, 340px);
   height: auto;
@@ -446,6 +497,10 @@ a:focus-visible {
 
   .hero p {
     margin-inline: auto;
+  }
+
+  .app-store-area {
+    justify-items: center;
   }
 
   .hero-logo {
