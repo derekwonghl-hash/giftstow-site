@@ -62,15 +62,24 @@
               card payloads use iOS protected storage, and approved images use the app’s local file
               storage.
             </p>
+            <p>
+              Pending imports are local drafts, separate from saved gift cards. GiftStow keeps
+              private copies of selected photos and confirmed draft corrections so you can resume
+              review after restarting. Draft numbers, PINs and decoded values use separately
+              namespaced iOS protected storage. Main and optional online credentials remain
+              separate. Raw OCR text is not retained.
+            </p>
           </section>
 
           <section id="camera">
             <h2>Camera and photos</h2>
             <p>
               Camera access is used only when you choose to scan a gift-card barcode. Photo-library
-              access is used only when you choose an image to import. Scanning and supported image
-              recognition occur on the device. GiftStow does not upload these images or barcode
-              values.
+              access is used only when you choose an image to import. Scanning, supported linear
+              barcode/QR detection and printed-detail recognition occur on the device. Suggested
+              details are editable and require your review before Save; recognition is not a live
+              balance lookup or PIN verification. GiftStow does not upload these images, recognised
+              text or barcode values.
             </p>
           </section>
 
@@ -95,10 +104,24 @@
           <section id="deletion">
             <h2>Deleting your data</h2>
             <p>
-              You can permanently delete a card from its card-detail screen. GiftStow then removes
-              that card’s local metadata, protected payload, approved image and related activity.
-              You can also remove the app using iOS. Contact support if you need help with
-              local-data deletion.
+              You can permanently delete a card from its card-detail screen. GiftStow removes its
+              local database records and queues cleanup of the protected payload, approved image and
+              scheduled reminder. Pending cleanup is retried when Wallet opens. Original photos in
+              your Photos library are not removed.
+            </p>
+            <p>
+              Use Discard import to remove a pending draft. Saving a confirmed card or discarding a
+              draft queues removal of its app-owned copies and protected values; cleanup is retried
+              when pending imports are checked. Saved cards and original library photos are
+              unchanged.
+            </p>
+            <p>
+              iOS protected storage can survive app uninstallation. Removing the app therefore does
+              not guarantee that protected values have been erased; prefer the in-app
+              permanent-delete action before uninstalling. GiftStow has no cloud wallet or
+              cross-device restore service. Keep your original cards or source photos, and contact
+              support if you need help with local-data deletion. Never email card numbers, PINs,
+              readable barcodes or unredacted card images.
             </p>
           </section>
 

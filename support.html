@@ -41,16 +41,28 @@
           <h3>Where is my data stored?</h3>
           <p>
             Gift-card data is stored locally on your iPhone. GiftStow does not currently offer an
-            account or cloud sync.
+            account or cloud sync. Import up to 10 photos at a time and return to Pending imports on
+            Wallet or Add card. Photos and confirmed corrections survive restarts, but drafts do not
+            enter Wallet totals until you explicitly save each card.
           </p>
         </article>
 
         <article>
           <h3>Why was a linear barcode not found in an imported image?</h3>
           <p>
-            The current image-import path recognises QR codes. Use
-            <strong>Scan barcode with camera</strong> for a live linear-barcode scan, or continue
-            manually while retaining the selected image.
+            The native GiftStow app can recognise supported linear barcodes and QR codes in imported
+            images and suggest printed card details, entirely on your iPhone. Recognition is
+            best-effort: a small, blurred or unsupported code may not be found. Compare the original
+            image with the decoded preview and review every suggested value before saving. Image
+            balances may be out of date; GiftStow does not fetch live balances or verify PINs. If
+            detection fails, use <strong>Scan barcode with camera</strong> or continue manually
+            while retaining the image. Expo Go and older development builds without the native
+            recogniser support QR-only image detection.
+          </p>
+          <p>
+            Check in-store and optional online numbers/PINs separately. Only clearly labelled
+            current balances are suggested; original values and handwritten corrections stay manual.
+            If no barcode is decoded, GiftStow does not invent one for a new import.
           </p>
         </article>
 
@@ -66,7 +78,15 @@
           <h3>How do I remove a card?</h3>
           <p>
             Open the card, archive it if required, then use the permanent-delete action and confirm
-            the warning.
+            the warning. GiftStow removes the card's database records and retries any pending
+            protected-payload, imported-image and reminder cleanup when Wallet opens. Prefer in-app
+            deletion before uninstalling: iOS protected storage can survive an uninstall, so
+            removing the app is not a guaranteed protected-data wipe. Original photos in your Photos
+            library are not removed.
+          </p>
+          <p>
+            Remove an unfinished import from Pending imports using Discard import. Draft cleanup
+            retries safely; saved cards and original library photos are unchanged.
           </p>
         </article>
       </section>
@@ -74,7 +94,10 @@
       <section class="contact-panel" aria-labelledby="contact-heading">
         <div>
           <h2 id="contact-heading">Still need help?</h2>
-          <p>Email GiftStow support and describe what happened.</p>
+          <p>
+            Email GiftStow support and describe what happened. Do not send real card numbers, PINs,
+            readable barcodes or unredacted gift-card images.
+          </p>
         </div>
         <a class="button-link button-solid" href="mailto:giftstow.app@gmail.com">
           Email support
